@@ -1,0 +1,17 @@
+# Local dependencies and generated output
+node_modules/
+.next/
+dist/
+build/
+coverage/
+.docx-preview/
+__pycache__/
+*.pyc
+
+# Local secrets and machine configuration
+.env*
+!.env.example
+*.pem
+*.key
+.DS_Store
+Thumbs.db

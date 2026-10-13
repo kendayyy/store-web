@@ -1,0 +1,27 @@
+import type { Article, Brand, Category, Product, Promotion } from "@/types";
+
+export const brands: Brand[] = ["Yonex", "Victor", "Li-Ning", "Joola", "Selkirk", "Head", "Adidas"].map((name) => ({ id:name.toLowerCase(), name }));
+export const categories: Category[] = [
+  { id:"badminton", name:"Cầu lông", sport:"Cầu lông", description:"Vợt, giày và phụ kiện cho mọi trình độ." },
+  { id:"pickleball", name:"Pickleball", sport:"Pickleball", description:"Paddle, bóng và túi cho sân chơi hiện đại." },
+  { id:"shoes", name:"Giày sân", description:"Độ bám tốt, ổn định và thoải mái." },
+  { id:"accessories", name:"Phụ kiện", description:"Hoàn thiện bộ đồ trước mỗi trận đấu." },
+];
+export const products: Product[] = [
+  { id:"p1", slug:"vot-cau-long-yonex-astrox-88d", name:"Vợt cầu lông Astrox 88D", brand:"Yonex", sport:"Cầu lông", category:"Vợt", tier:"Cao cấp", price:3890000, oldPrice:4290000, rating:4.9, reviews:128, badge:"Mới", description:"Thân vợt chắc, điểm cân bằng nặng đầu cho người chơi thiên công.", specs:{"Trọng lượng":"4U","Độ cứng":"Cứng","Sức căng":"Tối đa 28 lbs"}, variants:[{id:"4u-g5",label:"4U / G5",stock:8},{id:"3u-g5",label:"3U / G5",stock:3}], tone:"orange", featured:true, bestseller:true },
+  { id:"p2", slug:"vot-cau-long-victor-thruster-k", name:"Vợt cầu lông Thruster K", brand:"Victor", sport:"Cầu lông", category:"Vợt", tier:"Trung cấp", price:2190000, oldPrice:2490000, rating:4.8, reviews:86, badge:"-12%", description:"Khung vợt ổn định, trợ lực tốt và dễ làm quen cho người chơi phong trào.", specs:{"Trọng lượng":"4U","Độ cứng":"Trung bình","Sức căng":"Tối đa 27 lbs"}, variants:[{id:"4u-g5",label:"4U / G5",stock:12}], tone:"charcoal", featured:true },
+  { id:"p3", slug:"paddle-joola-hyperion", name:"Paddle Hyperion CFS", brand:"Joola", sport:"Pickleball", category:"Paddle", tier:"Cao cấp", price:4590000, oldPrice:4990000, rating:4.9, reviews:74, badge:"Bán chạy", description:"Mặt carbon tạo xoáy tốt, sweet spot rộng và cảm giác bóng chắc chắn.", specs:{"Độ dày":"16 mm","Bề mặt":"Carbon","Trọng lượng":"235 g"}, variants:[{id:"16mm",label:"16 mm",stock:6}], tone:"lime", featured:true, bestseller:true },
+  { id:"p4", slug:"paddle-head-radical-elite", name:"Paddle Radical Elite", brand:"Head", sport:"Pickleball", category:"Paddle", tier:"Trung cấp", price:1890000, oldPrice:2190000, rating:4.7, reviews:61, badge:"Gợi ý", description:"Cân bằng giữa kiểm soát và lực đánh, phù hợp người mới nâng cấp.", specs:{"Độ dày":"13 mm","Bề mặt":"Composite","Trọng lượng":"230 g"}, variants:[{id:"standard",label:"Tiêu chuẩn",stock:15}], tone:"blue", featured:true },
+  { id:"p5", slug:"giay-yonex-power-cushion", name:"Giày Power Cushion 65Z", brand:"Yonex", sport:"Cầu lông", category:"Giày", tier:"Cao cấp", price:2450000, rating:4.8, reviews:95, badge:"Chính hãng", description:"Đệm êm, ôm chân và giữ ổn định khi đổi hướng tốc độ cao.", specs:{"Đế":"Cao su non-marking","Form":"Ôm vừa","Sân":"Trong nhà"}, variants:[{id:"40",label:"Size 40",stock:5},{id:"41",label:"Size 41",stock:7},{id:"42",label:"Size 42",stock:4}], tone:"silver", bestseller:true },
+  { id:"p6", slug:"giay-adidas-courtjam", name:"Giày CourtJam Control", brand:"Adidas", sport:"Pickleball", category:"Giày", tier:"Trung cấp", price:1690000, oldPrice:1890000, rating:4.6, reviews:48, badge:"-10%", description:"Đế bền, thân giày thoáng và hỗ trợ chuyển ngang trên sân cứng.", specs:{"Đế":"Adiwear","Form":"Tiêu chuẩn","Sân":"Trong/ngoài trời"}, variants:[{id:"40",label:"Size 40",stock:9},{id:"41",label:"Size 41",stock:8}], tone:"sand" },
+  { id:"p7", slug:"tui-victor-br9208", name:"Túi vợt BR9208", brand:"Victor", sport:"Cầu lông", category:"Túi", tier:"Phổ thông", price:790000, rating:4.7, reviews:42, badge:"Giá tốt", description:"Hai ngăn lớn, ngăn giày riêng và quai đeo êm cho lịch chơi hằng tuần.", specs:{"Sức chứa":"6 vợt","Ngăn giày":"Có","Chất liệu":"Polyester"}, variants:[{id:"black",label:"Đen",stock:18}], tone:"charcoal" },
+  { id:"p8", slug:"bong-pickleball-ngoai-troi", name:"Bóng Pickleball Outdoor 6 quả", brand:"Selkirk", sport:"Pickleball", category:"Phụ kiện", tier:"Phổ thông", price:390000, rating:4.6, reviews:55, badge:"Combo", description:"Độ nảy ổn định, màu dễ quan sát và phù hợp sân ngoài trời.", specs:{"Số lượng":"6 quả","Lỗ":"40","Bề mặt":"Sân ngoài trời"}, variants:[{id:"yellow",label:"Vàng",stock:30}], tone:"yellow", bestseller:true },
+];
+export const promotions:Promotion[] = [{id:"shoes",title:"Giày sân giảm đến 30%",subtitle:"Vững bước trong mọi pha đổi hướng"},{id:"gear",title:"Phụ kiện sẵn sàng ra sân",subtitle:"Mua theo bộ, tiết kiệm thời gian chọn"}];
+export const articles:Article[] = [
+  {id:"a1",category:"Cầu lông",title:"Chọn trọng lượng vợt phù hợp lối chơi",excerpt:"Cách phân biệt 3U, 4U và thời điểm nên ưu tiên tốc độ hoặc sức mạnh.",date:"18.09.2026"},
+  {id:"a2",category:"Pickleball",title:"Paddle 13 mm hay 16 mm",excerpt:"So sánh cảm giác bóng, khả năng kiểm soát và lực đánh cho người chơi phong trào.",date:"12.09.2026"},
+  {id:"a3",category:"Giày sân",title:"Ba dấu hiệu bạn cần đổi giày",excerpt:"Độ bám, đệm và phần thân giày ảnh hưởng trực tiếp đến sự ổn định trên sân.",date:"05.09.2026"},
+];
+export const formatPrice=(value:number)=>new Intl.NumberFormat("vi-VN",{style:"currency",currency:"VND",maximumFractionDigits:0}).format(value);
+export const getProduct=(slug:string)=>products.find((product)=>product.slug===slug);
